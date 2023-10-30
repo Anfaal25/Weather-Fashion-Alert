@@ -50,11 +50,8 @@ def configure():
 
 def send_email(subject, body):
     from_name = "Weather Update"
-    from_email = "anfaal716@gmail.com"
-  
-
     msg = MIMEMultipart()
-    msg['From'] = f"{from_name} <{from_email}>"
+    msg['From'] = f"{from_name} <{os.getenv('from_email')}>"
     msg['To'] = os.getenv('to_email')
     msg['Subject'] = subject
 
@@ -62,9 +59,9 @@ def send_email(subject, body):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(from_email, os.getenv('from_email_password'))
+    server.login(os.getenv('from_email'), os.getenv('from_email_password'))
     text = msg.as_string()
-    server.sendmail(from_email, os.getenv('to_email'), text)
+    server.sendmail(os.getenv('from_email'), os.getenv('to_email'), text)
     server.quit()
 
 subject = ""
