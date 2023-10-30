@@ -2,6 +2,8 @@
 # Weather && Fashion Alert
 
 The Weather Update Service is a simple Python script that provides regular weather updates for a specific city. It utilizes the OpenWeatherMap API to fetch weather data and sends notifications via email.
+It also provides the weather to OpenAI and utilizes a prompt to give the user a message that advices them on the attire for the day outside.
+I came up with this idea to streamline the beginning of my workdays and lose less time on deciding how well I should prepare for the elements.
 
 ## Prerequisites
 
@@ -11,6 +13,7 @@ Before you begin, ensure you have the following:
 - An OpenWeatherMap API key. You can obtain one by signing up on the [OpenWeatherMap website](https://openweathermap.org/api).
 
 ## Setup
+**Note** - At this moment the fashion advisor via OpenAI is not available, due to token shortages.
 
 1. **Clone the repository to your local machine:**
 
