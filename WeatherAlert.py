@@ -50,7 +50,7 @@ def configure():
 
 def send_email(subject, body):
     from_name = "Weather Update"
-    from_email = "anfaal716@gmail.com"
+    
   
 
     msg = MIMEMultipart()
